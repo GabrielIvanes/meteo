@@ -148,8 +148,7 @@ body {
 .box-description,
 .temperature,
 .lever-coucher,
-.details,
-.heure-local {
+.details {
   opacity: 0;
 }
 
