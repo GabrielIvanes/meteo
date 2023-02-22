@@ -20,7 +20,6 @@ recherche.addEventListener("click", function () {
         document.querySelector(".box-image").style.display = "none";
         document.querySelector(".details").style.display = "none";
         document.querySelector(".nom-localisation").style.display = "none";
-        document.querySelector(".heure-local").style.display = "none";
         error404.classList.add("fadeIn");
         document.querySelector(".main-wrapper").style.height = "550px";
         return;
@@ -36,7 +35,6 @@ recherche.addEventListener("click", function () {
       const vitesseVent = document.querySelector(".vitesse");
       const humidite = document.querySelector(".pourcentage");
       const nomLocalisation = document.querySelector(".nom-localisation");
-      const heure = document.querySelector(".heure-local");
 
       error404.style.display = "none";
       error404.classList.remove("fadeIn");
@@ -46,14 +44,12 @@ recherche.addEventListener("click", function () {
       document.querySelector(".box-image").style.display = "flex";
       document.querySelector(".details").style.display = "flex";
       nomLocalisation.style.display = "flex";
-      heure.style.display = "flex";
       description.classList.add("fadeIn");
       document.querySelector(".details").classList.add("fadeIn");
       document.querySelector(".temperature").classList.add("fadeIn");
       document.querySelector(".lever-coucher").classList.add("fadeIn");
       document.querySelector(".box-image").classList.add("fadeIn");
       nomLocalisation.classList.add("fadeIn");
-      heure.classList.add("fadeIn");
       document.querySelector(".main-wrapper").style.height = "550px";
 
       if (rep.wind.deg === 0 || rep.wind.deg === 360) {
@@ -112,11 +108,5 @@ recherche.addEventListener("click", function () {
       minutes = "0" + date.getMinutes();
 
       coucheSoleil.innerHTML = hours + ":" + minutes.substr(-2);
-
-      const heureLocal = new Date(rep.dt * 1000 + rep.timezone * 1000);
-      hours = heureLocal.getHours();
-      minutes = "0" + heureLocal.getMinutes();
-
-      heure.innerHTML = hours + ":" + minutes.substr(-2);
     });
 });
