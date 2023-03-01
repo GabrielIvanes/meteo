@@ -1,0 +1,170 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #06283d;
+}
+
+.main-wrapper {
+  position: relative;
+  height: 85px;
+  width: 500px;
+  background: #fff;
+  padding: 28px 32px;
+  overflow: hidden;
+  border-radius: 18px;
+  font-family: "Roboto", sans-serif;
+  transition: 0.6s ease-out;
+}
+
+.search-box {
+  width: 100%;
+  height: min-content;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.search-box input {
+  width: 90%;
+  text-transform: uppercase;
+  font-size: 16px;
+  background-color: #dff6ff;
+  border-radius: 18px;
+  padding: 5px;
+  transition: 0.4s ease;
+}
+
+.search-box button {
+  cursor: pointer;
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #dff6ff;
+}
+
+.error-404 {
+  font-size: 20px;
+  display: none;
+}
+
+.error-404 img {
+  margin: 20px 0px 20px 0px;
+  height: 300px;
+}
+
+.nom-localisation {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+  font-size: 20px;
+  opacity: 0;
+}
+
+.box-image {
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  height: 100px;
+}
+
+.box-description {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.temperature,
+.lever-coucher {
+  display: flex;
+  justify-content: space-around;
+}
+
+.reelle,
+.ressentie,
+.lever,
+.coucher {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.coucher {
+  color: #fbc05d;
+}
+
+.lever {
+  color: #e4692e;
+}
+
+.temperature .chiffre,
+.heure {
+  font-size: 30px;
+}
+
+.description {
+  margin: 5px 0px 10px 0px;
+}
+
+.chiffre span {
+  margin-left: 4px;
+}
+
+.details {
+  margin: 70px 50px 0px 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.details img {
+  height: 15px;
+  width: 15px;
+}
+
+.humidite,
+.vent {
+  display: flex;
+  align-items: center;
+}
+
+.vitesse,
+.pourcentage {
+  margin-left: 8px;
+}
+
+.heure-local {
+  margin-top: 10px;
+}
+
+.error-404,
+.box-image,
+.box-description,
+.temperature,
+.lever-coucher,
+.details,
+.heure-local {
+  opacity: 0;
+}
+
+.fadeIn {
+  animation: 0.5s fadeIn forwards;
+  animation-delay: 0.5s;
+}
+
+@keyframes fadeIn {
+  to {
+    scale: 1;
+    opacity: 1;
+  }
+}
