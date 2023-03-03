@@ -1,4 +1,4 @@
-const apiKey = "d03d742b9fcb21f913d13177a9eeb2a6";
+const apiKey = "apiKey";
 
 const error404 = document.querySelector(".error-404");
 const recherche = document.querySelector(".search-box button");
