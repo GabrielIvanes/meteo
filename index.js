@@ -1,15 +1,26 @@
 const apiKey = "apiKey";
 
+// Auto-completion with google maps API
+document.getElementById("citieList").addEventListener("input", function () {
+  let searchBox = new google.maps.places.Autocomplete(
+    document.querySelector("#citieList")
+  );
+  let local = searchBox.getPlace();
+});
+
 const error404 = document.querySelector(".error-404");
 const recherche = document.querySelector(".search-box button");
 
+// When the seach button is cliked
 recherche.addEventListener("click", function () {
+  //Recover the value enter in the input
   const localisation = document.querySelector(".search-box input").value;
   fetch(
     `https://api.openweathermap.org/data/2.5/weather?q=${localisation}&units=metric&appid=${apiKey}&lang=fr`
   )
     .then((reponse) => reponse.json())
     .then((rep) => {
+      // If error cod is 404, display error404
       if (rep.cod === "404") {
         error404.style.display = "flex";
         error404.style.flexDirection = "column";
@@ -56,6 +67,7 @@ recherche.addEventListener("click", function () {
       heure.classList.add("fadeIn");
       document.querySelector(".main-wrapper").style.height = "550px";
 
+      // Acording to the wind direction, we show a different image
       if (
         (rep.wind.deg >= 0 && rep.wind.deg <= 11.25) ||
         (rep.wind.deg <= 360 && rep.wind.deg >= 348.75)
@@ -114,6 +126,7 @@ recherche.addEventListener("click", function () {
         minute: "numeric",
       };
 
+      // Allow us to have the local time of the city, the contry searched
       const timezone = rep.timezone;
       const heureLocal = new Date(
         Date.now() + (timezone - new Date().getTimezoneOffset() * -60) * 1000
