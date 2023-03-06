@@ -15,7 +15,11 @@
     <div class="main-wrapper">
       <div class="search-box">
         <i class="fa-solid fa-location-dot"></i>
-        <input type="text" placeholder="Entrez votre localisation" />
+        <input
+          id="citieList"
+          type="text"
+          placeholder="Entrez votre localisation"
+        />
         <button class="fa-solid fa-magnifying-glass"></button>
       </div>
       <div class="error-404">
@@ -64,6 +68,7 @@
       src="https://kit.fontawesome.com/7c8801c017.js"
       crossorigin="anonymous"
     ></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=apiKey&libraries=places,geometry"></script>
     <script src="index.js"></script>
   </body>
 </html>
