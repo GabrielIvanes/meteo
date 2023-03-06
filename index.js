@@ -126,7 +126,7 @@ recherche.addEventListener("click", function () {
         minute: "numeric",
       };
 
-      // Allow us to have the local time of the city, the contry searched
+      // Allows us to have the local time of the city, the contry searched
       const timezone = rep.timezone;
       const heureLocal = new Date(
         Date.now() + (timezone - new Date().getTimezoneOffset() * -60) * 1000
