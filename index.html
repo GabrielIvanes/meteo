@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Météo du moment</title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <div class="search-box">
+        <i class="fa-solid fa-location-dot"></i>
+        <input
+          id="citieList"
+          type="text"
+          placeholder="Entrez votre localisation"
+        />
+        <button class="fa-solid fa-magnifying-glass"></button>
+      </div>
+      <div class="error-404">
+        <img src="images/error-404.png" alt="error 404" />
+        <p>Localisation inconnue &#128559;</p>
+      </div>
+      <div class="heure-local"></div>
+      <div class="nom-localisation"></div>
+      <div class="box-image">
+        <img src="" />
+      </div>
+      <div class="box-description"></div>
+      <div class="temperature">
+        <div class="reelle">
+          <div class="chiffre"></div>
+          <div class="description">Réelle</div>
+        </div>
+        <div class="ressentie">
+          <div class="chiffre"></div>
+          <div class="description">Ressentie</div>
+        </div>
+      </div>
+      <div class="lever-coucher">
+        <div class="lever">
+          <div class="heure"></div>
+          <div class="description"><b>Levé</b> du jour</div>
+        </div>
+        <div class="coucher">
+          <div class="heure"></div>
+          <div class="description"><b>Couché</b> du jour</div>
+        </div>
+      </div>
+      <div class="details">
+        <div class="vent">
+          <img src="" />
+          <div class="vitesse"></div>
+        </div>
+        <div class="humidite">
+          <i class="fa-solid fa-water"></i>
+          <div class="pourcentage"></div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://kit.fontawesome.com/7c8801c017.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=apiKey&libraries=places,geometry"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
